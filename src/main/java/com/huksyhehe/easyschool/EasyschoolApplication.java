@@ -1,13 +1,13 @@
-package com.huksyhehe.dayzschool;
+package com.huksyhehe.easyschool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DayzschoolApplication {
+public class EasyschoolApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DayzschoolApplication.class, args);
+		SpringApplication.run(EasyschoolApplication.class, args);
 	}
 
 }

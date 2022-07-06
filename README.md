@@ -1,1 +1,1 @@
-# DayZ School Management System
+# Easy School Management System
