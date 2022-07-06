@@ -1,1 +1,1 @@
-# Easy School Management System
+# Eazy School Management System
