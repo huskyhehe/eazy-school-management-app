@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.huksyhehe</groupId>
-	<artifactId>dayzschool</artifactId>
+	<artifactId>easyschool</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dayzschool</name>
-	<description>DayZ School Management Web Application</description>
+	<name>easyschool</name>
+	<description>Easy School Management Web Application</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
