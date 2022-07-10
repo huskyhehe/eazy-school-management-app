@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +16,10 @@ import java.util.stream.Collectors;
 public class HolidaysController {
 
     @GetMapping("/holidays")
-    public String displayHolidays(Model model) {
+    public String displayHolidays(@RequestParam(required = false) boolean festival,
+                                  @RequestParam(required = false) boolean federal,Model model) {
+        model.addAttribute("festival",festival);
+        model.addAttribute("federal",federal);
         List<Holiday> holidays = Arrays.asList(
                 new Holiday(" Jan 1 ","New Year's Day", Holiday.Type.FESTIVAL),
                 new Holiday(" Oct 31 ","Halloween", Holiday.Type.FESTIVAL),
