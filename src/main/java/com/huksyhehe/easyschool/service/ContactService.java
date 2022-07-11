@@ -4,6 +4,7 @@ import com.huksyhehe.easyschool.model.Contact;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 /*
 @Slf4j, is a Lombok-provided annotation that will automatically generate an SLF4J
@@ -11,7 +12,8 @@ Logger static property in the class at compilation time.
 * */
 @Slf4j
 @Service
-@RequestScope
+//@RequestScope
+@SessionScope
 public class ContactService {
 
     private int counter = 0;
