@@ -10,7 +10,8 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.authorizeHttpRequests()
+        http.csrf().disable()
+                .authorizeHttpRequests()
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("holidays/**").permitAll()
                 .mvcMatchers("/saveMsg").permitAll()
