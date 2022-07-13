@@ -22,4 +22,6 @@ public class GlobalExceptionController {
         errorPage.addObject("errorMsg", exception.getMessage());
         return errorPage;
     }
+
+    
 }
