@@ -23,5 +23,5 @@ public class GlobalExceptionController {
         return errorPage;
     }
 
-    
+
 }

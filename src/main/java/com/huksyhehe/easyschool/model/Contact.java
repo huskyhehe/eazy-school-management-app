@@ -8,13 +8,19 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-/*
-@Data annotation is provided by Lombok library which generates getter, setter,
-equals(), hashCode(), toString() methods & Constructor at compile time.
-This makes our code short and clean.
-* */
+    /**
+     * @Data annotation is provided by Lombok library which generates getter, setter,
+     * equals(), hashCode(), toString() methods & Constructor at compile time.
+     * This makes our code short and clean.
+    **/
 @Data
 public class Contact {
+
+    /**
+     * @NotNull: Checks if a given field is not null but allows empty values & zero elements inside collections
+     * @NotEmpty: Checks if a given field is not null and its size/length is greater than zero.
+     * @NotBlank: Checks if a given field is not null and trimmed length is greater than zero.
+    **/
 
     @NotBlank(message = "Name must not be blank")
     @Size(min = 3, message = "Name must not be at least 3 characters long")
