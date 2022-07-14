@@ -1,6 +1,6 @@
 package com.huksyhehe.easyschool.service;
 
-import com.huksyhehe.easyschool.constants.EazySchoolConstants;
+import com.huksyhehe.easyschool.constant.EazySchoolConstants;
 import com.huksyhehe.easyschool.model.Contact;
 import com.huksyhehe.easyschool.repository.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
