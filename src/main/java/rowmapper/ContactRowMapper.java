@@ -1,4 +1,4 @@
-package rowmappers;
+package rowmapper;
 
 import com.huksyhehe.easyschool.model.Contact;
 import org.springframework.jdbc.core.RowMapper;
@@ -21,7 +21,7 @@ public class ContactRowMapper implements RowMapper<Contact> {
         contact.setCreatedAt(rs.getTimestamp("CREATED_AT").toLocalDateTime());
         contact.setCreatedBy(rs.getString("CREATED_BY"));
 
-        if(null!=rs.getTimestamp("UPDATED_AT")){
+        if(null != rs.getTimestamp("UPDATED_AT")) {
             contact.setUpdatedAt(rs.getTimestamp("UPDATED_AT").toLocalDateTime());
         }
         contact.setUpdatedBy(rs.getString("UPDATED_BY"));
