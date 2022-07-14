@@ -1,4 +1,4 @@
-package rowmapper;
+package com.huksyhehe.easyschool.rowmapper;
 
 import com.huksyhehe.easyschool.model.Contact;
 import org.springframework.jdbc.core.RowMapper;
