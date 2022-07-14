@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.stereotype.Repository;
-import rowmapper.ContactRowMapper;
+import com.huksyhehe.easyschool.rowmapper.ContactRowMapper;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
