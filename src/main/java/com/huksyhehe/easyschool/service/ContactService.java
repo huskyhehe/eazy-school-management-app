@@ -6,9 +6,6 @@ import com.huksyhehe.easyschool.repository.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.ApplicationScope;
-import org.springframework.web.context.annotation.RequestScope;
-import org.springframework.web.context.annotation.SessionScope;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -19,9 +16,6 @@ Logger static property in the class at compilation time.
 * */
 @Slf4j
 @Service
-//@RequestScope
-//@SessionScope
-@ApplicationScope
 public class ContactService {
 
     @Autowired
@@ -47,12 +41,12 @@ public class ContactService {
         return isSaved;
     }
 
-    public List<Contact> findMsgsWithOpenStatus(){
+    public List<Contact> findMsgsWithOpenStatus() {
         List<Contact> contactMsgs = contactRepository.findMsgsWithStatus(EazySchoolConstants.OPEN);
         return contactMsgs;
     }
 
-    public boolean updateMsgStatus(int contactId, String updatedBy){
+    public boolean updateMsgStatus(int contactId, String updatedBy) {
         boolean isUpdated = false;
         int result = contactRepository.updateMsgStatus(contactId,EazySchoolConstants.CLOSE, updatedBy);
         if(result>0) {
