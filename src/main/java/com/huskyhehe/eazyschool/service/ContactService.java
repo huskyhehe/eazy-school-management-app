@@ -1,8 +1,8 @@
-package com.huksyhehe.easyschool.service;
+package com.huskyhehe.eazyschool.service;
 
-import com.huksyhehe.easyschool.constant.EazySchoolConstants;
-import com.huksyhehe.easyschool.model.Contact;
-import com.huksyhehe.easyschool.repository.ContactRepository;
+import com.huskyhehe.eazyschool.constants.EazySchoolConstants;
+import com.huskyhehe.eazyschool.model.Contact;
+import com.huskyhehe.eazyschool.repository.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

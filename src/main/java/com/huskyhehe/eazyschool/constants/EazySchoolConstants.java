@@ -1,4 +1,4 @@
-package com.huksyhehe.easyschool.constant;
+package com.huskyhehe.eazyschool.constants;
 
 public interface EazySchoolConstants {
     public static final String ANONYMOUS = "Anonymous";

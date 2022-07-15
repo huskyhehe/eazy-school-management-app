@@ -1,7 +1,7 @@
-package com.huksyhehe.easyschool.controller;
+package com.huskyhehe.eazyschool.controller;
 
-import com.huksyhehe.easyschool.model.Contact;
-import com.huksyhehe.easyschool.service.ContactService;
+import com.huskyhehe.eazyschool.model.Contact;
+import com.huskyhehe.eazyschool.service.ContactService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

@@ -8,7 +8,7 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.huksyhehe</groupId>
+	<groupId>com.huskyhehe</groupId>
 	<artifactId>eazyschool</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eazyschool</name>

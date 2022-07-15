@@ -1,4 +1,4 @@
-package com.huksyhehe.easyschool.model;
+package com.huskyhehe.eazyschool.model;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.huksyhehe.easyschool;
+package com.huskyhehe.eazyschool;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
