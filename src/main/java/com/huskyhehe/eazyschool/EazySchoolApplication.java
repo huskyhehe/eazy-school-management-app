@@ -1,4 +1,4 @@
-package com.huksyhehe.easyschool;
+package com.huskyhehe.eazyschool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

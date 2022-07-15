@@ -1,6 +1,6 @@
-package com.huksyhehe.easyschool.rowmapper;
+package com.huskyhehe.eazyschool.rowmapper;
 
-import com.huksyhehe.easyschool.model.Contact;
+import com.huskyhehe.eazyschool.model.Contact;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

@@ -1,4 +1,4 @@
-package com.huksyhehe.easyschool.repository;
+package com.huskyhehe.eazyschool.repository;
 
 /**
  * @Repository stereotype annotation is used to add a bean of this class
@@ -6,12 +6,12 @@ package com.huksyhehe.easyschool.repository;
  * DB related operations
 * */
 
-import com.huksyhehe.easyschool.model.Contact;
+import com.huskyhehe.eazyschool.model.Contact;
+import com.huskyhehe.eazyschool.rowmapper.ContactRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.stereotype.Repository;
-import com.huksyhehe.easyschool.rowmapper.ContactRowMapper;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
