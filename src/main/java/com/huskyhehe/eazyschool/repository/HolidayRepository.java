@@ -14,8 +14,8 @@ public class HolidayRepository {
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public HolidayRepository(JdbcTemplate jdbcTemple) {
-        this.jdbcTemplate = jdbcTemple;
+    public HolidayRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     public List<Holiday> findAllHolidays() {
@@ -23,4 +23,5 @@ public class HolidayRepository {
         var rowMapper = BeanPropertyRowMapper.newInstance(Holiday.class);
         return jdbcTemplate.query(sql, rowMapper);
     }
+
 }
