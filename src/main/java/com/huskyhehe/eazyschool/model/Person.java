@@ -1,6 +1,5 @@
 package com.huskyhehe.eazyschool.model;
 
-import com.huskyhehe.eazyschool.annotation.FieldsValueMatch;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -12,18 +11,6 @@ import javax.validation.constraints.Size;
 
 @Data
 @Entity
-@FieldsValueMatch.List({
-        @FieldsValueMatch(
-                field = "pwd",
-                fieldMatch = "confirmPwd",
-                message = "Passwords do not match!"
-        ),
-        @FieldsValueMatch(
-                field = "email",
-                fieldMatch = "confirmEmail",
-                message = "Email addresses do not match!"
-        )
-})
 public class Person extends BaseEntity {
 
     @Id
