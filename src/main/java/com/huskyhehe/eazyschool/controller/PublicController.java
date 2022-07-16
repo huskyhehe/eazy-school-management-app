@@ -18,7 +18,7 @@ public class PublicController {
     @Autowired
     PersonService personService;
 
-    @RequestMapping(value = "/register", method = {RequestMethod.GET})
+    @RequestMapping(value ="/register",method = { RequestMethod.GET})
     public String displayRegisterPage(Model model) {
         model.addAttribute("person", new Person());
         return "register.html";

@@ -30,7 +30,6 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().httpBasic();
     }
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
