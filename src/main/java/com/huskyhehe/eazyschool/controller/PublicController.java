@@ -22,23 +22,23 @@ public class PublicController {
     @Autowired
     PersonService personService;
 
-    @RequestMapping(value ="/register",method = { RequestMethod.GET})
+    @RequestMapping(value ="/register",method = { RequestMethod.GET })
     public String displayRegisterPage(Model model) {
         model.addAttribute("person", new Person());
         return "register.html";
     }
 
-//    @RequestMapping(value ="/createUser",method = { RequestMethod.POST})
-//    public String createUser(@Valid @ModelAttribute("person") Person person, Errors errors) {
-//        if(errors.hasErrors()){
-//            return "register.html";
-//        }
-//        boolean isSaved = personService.createNewPerson(person);
-//        if(isSaved) {
-//            return "redirect:/login?register=true";
-//        } else {
-//            return "register.html";
-//        }
-//    }
+    @RequestMapping(value ="/createUser",method = { RequestMethod.POST })
+    public String createUser(@Valid @ModelAttribute("person") Person person, Errors errors) {
+        if(errors.hasErrors()){
+            return "register.html";
+        }
+        boolean isSaved = personService.createNewPerson(person);
+        if(isSaved) {
+            return "redirect:/login?register=true";
+        } else {
+            return "register.html";
+        }
+    }
 
 }
