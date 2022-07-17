@@ -13,8 +13,8 @@ import javax.persistence.Id;
 public class Role extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
-    @GenericGenerator(name = "native",strategy = "native")
+    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int roleId;
 
     private String roleName;
