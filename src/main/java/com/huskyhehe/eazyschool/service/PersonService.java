@@ -22,7 +22,7 @@ public class PersonService {
         Role role = roleRepository.getByRoleName(EazySchoolConstants.STUDENT_ROLE);
         person.setRoles(role);
         person = personRepository.save(person);
-        if (null != person && person.getPersonId() > 0) {
+        if (person != null && person.getPersonId() > 0) {
             isSaved = true;
         }
         return isSaved;
