@@ -29,8 +29,8 @@ import javax.validation.constraints.Size;
 public class Person extends BaseEntity{
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
-    @GenericGenerator(name = "native",strategy = "native")
+    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int personId;
 
     @NotBlank(message="Name must not be blank")
@@ -38,7 +38,7 @@ public class Person extends BaseEntity{
     private String name;
 
     @NotBlank(message="Mobile number must not be blank")
-    @Pattern(regexp="(^$|[0-9]{10})",message = "Mobile number must be 10 digits")
+    @Pattern(regexp="(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
     private String mobileNumber;
 
     @NotBlank(message="Email must not be blank")
@@ -60,11 +60,11 @@ public class Person extends BaseEntity{
     @Transient
     private String confirmPwd;
 
-    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST, targetEntity = Role.class)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST, targetEntity = Role.class)
     @JoinColumn(name = "role_id", referencedColumnName = "roleId",nullable = false)
     private Role roles;
 
-    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL, targetEntity = Address.class)
-    @JoinColumn(name = "address_id", referencedColumnName = "addressId",nullable = true)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = Address.class)
+    @JoinColumn(name = "address_id", referencedColumnName = "addressId", nullable = true)
     private Address address;
 }
