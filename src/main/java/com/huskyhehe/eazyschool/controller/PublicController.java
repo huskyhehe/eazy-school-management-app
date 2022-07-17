@@ -34,9 +34,9 @@ public class PublicController {
 //            return "register.html";
 //        }
 //        boolean isSaved = personService.createNewPerson(person);
-//        if(isSaved){
+//        if(isSaved) {
 //            return "redirect:/login?register=true";
-//        }else {
+//        } else {
 //            return "register.html";
 //        }
 //    }
