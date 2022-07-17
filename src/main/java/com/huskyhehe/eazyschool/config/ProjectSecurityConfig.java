@@ -30,13 +30,4 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().httpBasic();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user").password("12345").roles("USER")
-                .and()
-                .withUser("admin").password("admin").roles("USER", "ADMIN")
-                .and().passwordEncoder(NoOpPasswordEncoder.getInstance());
-    }
-
 }

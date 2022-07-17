@@ -24,11 +24,11 @@ public class LoginController {
                                    Model model) {
         String errorMsg = null;
         if (error != null) {
-            errorMsg = "Username or Password is incorrect !";
+            errorMsg = "Username or Password is incorrect !!";
         } else if (logout != null) {
-            errorMsg = "You have been successfully logged out !";
+            errorMsg = "You have been successfully logged out !!";
         } else if (register != null) {
-            errorMsg = "You registration successful. Login with registered credentials !";
+            errorMsg = "You registration successful. Login with registered credentials !!";
         }
 
         model.addAttribute("errorMsg", errorMsg);
