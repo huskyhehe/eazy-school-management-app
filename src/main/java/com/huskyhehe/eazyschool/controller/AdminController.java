@@ -57,15 +57,15 @@ public class AdminController {
     @GetMapping("/displayStudents")
     public ModelAndView displayStudents(Model model, @RequestParam int classId, HttpSession session,
                                         @RequestParam(value = "error", required = false) String error) {
-        String errorMessage = null;
+        String erroMsg = null;
         ModelAndView modelAndView = new ModelAndView("students.html");
         Optional<EazyClass> eazyClass = eazyClassRepository.findById(classId);
-        modelAndView.addObject("eazyClass",eazyClass.get());
-        modelAndView.addObject("person",new Person());
-        session.setAttribute("eazyClass",eazyClass.get());
+        modelAndView.addObject("eazyClass", eazyClass.get());
+        modelAndView.addObject("person", new Person());
+        session.setAttribute("eazyClass", eazyClass.get());
         if(error != null) {
-            errorMessage = "Invalid Email entered!!";
-            modelAndView.addObject("errorMessage", errorMessage);
+            erroMsg = "Invalid Email entered!!";
+            modelAndView.addObject("errorMessage", erroMsg);
         }
         return modelAndView;
     }
@@ -95,7 +95,7 @@ public class AdminController {
         person.get().setEazyClass(null);
         eazyClass.getPersons().remove(person.get());
         EazyClass eazyClassSaved = eazyClassRepository.save(eazyClass);
-        session.setAttribute("eazyClass",eazyClassSaved);
+        session.setAttribute("eazyClass", eazyClassSaved);
         ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayStudents?classId="+eazyClass.getClassId());
         return modelAndView;
     }
