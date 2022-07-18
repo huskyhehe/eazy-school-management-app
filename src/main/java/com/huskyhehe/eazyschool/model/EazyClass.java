@@ -1,5 +1,7 @@
 package com.huskyhehe.eazyschool.model;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -7,6 +9,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Set;
 
+@Getter
+@Setter
+@Entity
 @Table(name = "class")
 public class EazyClass extends BaseEntity {
 
