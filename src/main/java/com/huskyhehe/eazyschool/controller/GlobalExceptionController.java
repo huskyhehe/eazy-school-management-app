@@ -23,14 +23,13 @@ public class GlobalExceptionController {
 
         if (exception.getMessage() != null) {
             errorMsg = exception.getMessage();
-        }else if (exception.getCause() != null) {
+        } else if (exception.getCause() != null) {
             errorMsg = exception.getCause().toString();
-        }else if (exception!=null) {
+        } else if (exception!=null) {
             errorMsg = exception.toString();
         }
         errorPage.addObject("errorMsg", errorMsg);
         return errorPage;
     }
-
 
 }
