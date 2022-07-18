@@ -18,7 +18,9 @@ public @interface FieldsValueMatch {
     Class<? extends Payload>[] payload() default {};
 
     String message() default "Fields values don't match!";
+
     String field();
+
     String fieldMatch();
 
     @Target({ ElementType.TYPE })
