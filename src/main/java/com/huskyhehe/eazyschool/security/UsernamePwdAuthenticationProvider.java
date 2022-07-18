@@ -1,7 +1,7 @@
 package com.huskyhehe.eazyschool.security;
 
 import com.huskyhehe.eazyschool.model.Person;
-import com.huskyhehe.eazyschool.model.Role;
+import com.huskyhehe.eazyschool.model.Roles;
 import com.huskyhehe.eazyschool.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -43,7 +43,7 @@ public class UsernamePwdAuthenticationProvider implements AuthenticationProvider
         }
     }
 
-    private Collection<? extends GrantedAuthority> getGrantedAuthorities(Role roles) {
+    private Collection<? extends GrantedAuthority> getGrantedAuthorities(Roles roles) {
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_"+roles.getRoleName()));
         return grantedAuthorities;
