@@ -26,7 +26,7 @@ import javax.validation.constraints.Size;
                 message = "Email addresses do not match!"
         )
 })
-public class Person extends BaseEntity{
+public class Person extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
@@ -45,7 +45,7 @@ public class Person extends BaseEntity{
     @Email(message = "Please provide a valid email address" )
     private String email;
 
-    @NotBlank(message="Confirm Email must not be blank")
+    @NotBlank(message = "Confirm Email must not be blank")
     @Email(message = "Please provide a valid confirm email address" )
     @Transient
     private String confirmEmail;
