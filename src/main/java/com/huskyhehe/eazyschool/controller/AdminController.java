@@ -150,6 +150,7 @@ public class AdminController {
         return modelAndView;
     }
 
+    @PostMapping("/addStudentToCourse")
     public ModelAndView addStudentToCourse(Model model,
                                            @ModelAttribute("person") Person person,
                                            HttpSession session) {
