@@ -49,19 +49,19 @@ Author URL: http://w3layouts.com
             <thead class="table-dark">
             <tr>
                 <th class="sorting" scope="col">
-                    <a th:href="@{'/displayMessages/page/' + ${currentPage} + '?sortField=name&sortDir=' + ${reverseSortDir}}">Name</a>
+                    <a th:href="@{'/displayMsgs/page/' + ${currentPage} + '?sortField=name&sortDir=' + ${reverseSortDir}}">Name</a>
                 </th>
                 <th class="sorting" scope="col">
-                    <a th:href="@{'/displayMessages/page/' + ${currentPage} + '?sortField=mobileNum&sortDir=' + ${reverseSortDir}}">Mobile Num</a>
+                    <a th:href="@{'/displayMsgs/page/' + ${currentPage} + '?sortField=mobileNum&sortDir=' + ${reverseSortDir}}">Mobile Num</a>
                 </th>
                 <th class="sorting" scope="col">
-                    <a th:href="@{'/displayMessages/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">Email</a>
+                    <a th:href="@{'/displayMsgs/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">Email</a>
                 </th>
                 <th class="sorting" scope="col">
-                    <a th:href="@{'/displayMessages/page/' + ${currentPage} + '?sortField=subject&sortDir=' + ${reverseSortDir}}">Subject</a>
+                    <a th:href="@{'/displayMsgs/page/' + ${currentPage} + '?sortField=subject&sortDir=' + ${reverseSortDir}}">Subject</a>
                 </th>
                 <th class="sorting" scope="col">
-                    <a th:href="@{'/displayMessages/page/' + ${currentPage} + '?sortField=message&sortDir=' + ${reverseSortDir}}">Message</a>
+                    <a th:href="@{'/displayMsgs/page/' + ${currentPage} + '?sortField=message&sortDir=' + ${reverseSortDir}}">Message</a>
                 </th>
                 <th scope="col"></th>
             </tr>
@@ -82,7 +82,7 @@ Author URL: http://w3layouts.com
     <div class="pagination-style text-center mt-5">
         <ul>
             <li>
-                <a th:if="${currentPage > 1}" th:href="@{'/displayMessages/page/' + ${currentPage - 1}+'?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">
+                <a th:if="${currentPage > 1}" th:href="@{'/displayMsgs/page/' + ${currentPage - 1}+'?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">
                     <span class="fa fa-angle-double-left" aria-hidden="true"></span>
                 </a>
                 <a th:unless="${currentPage > 1}" class="not-allowed" disabled="">
@@ -91,12 +91,12 @@ Author URL: http://w3layouts.com
             </li>
             <span th:each="i: ${#numbers.sequence(1, totalPages)}">
             <li>
-                <a th:if="${currentPage != i}" th:href="@{'/displayMessages/page/' + ${i}+'?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+                <a th:if="${currentPage != i}" th:href="@{'/displayMsgs/page/' + ${i}+'?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
                 <a class="active" th:unless="${currentPage != i}">[[${i}]]</a>
             </li>
             </span>
             <li>
-                <a th:if="${currentPage < totalPages}" th:href="@{'/displayMessages/page/' + ${currentPage + 1}+'?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">
+                <a th:if="${currentPage < totalPages}" th:href="@{'/displayMsgs/page/' + ${currentPage + 1}+'?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">
                     <span class="fa fa-angle-double-right" aria-hidden="true"></span>
                 </a>
                 <a th:unless="${currentPage < totalPages}" class="not-allowed" disabled="">
