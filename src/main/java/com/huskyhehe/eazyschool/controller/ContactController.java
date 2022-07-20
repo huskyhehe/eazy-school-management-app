@@ -38,10 +38,10 @@ public class ContactController {
         return "contact.html";
     }
 
-    @RequestMapping(value = "/saveMsg", method = POST)
-    public String saveMsg(@Valid @ModelAttribute("contact") Contact contact, Errors errors){
-
-        if(errors.hasErrors()){
+    @RequestMapping(value = "/saveMsg",method = POST)
+    public String saveMessage(@Valid @ModelAttribute("contact") Contact contact,
+                              Errors errors) {
+        if (errors.hasErrors()) {
             log.error("Contact form validation failed due to : " + errors.toString());
             return "contact.html";
         }
@@ -49,11 +49,11 @@ public class ContactController {
         return "redirect:/contact";
     }
 
-    @RequestMapping("/displayMsgs/page/{pageNum}")
-    public ModelAndView displayMsgs(Model model,
-                                    @PathVariable(name = "pageNum") int pageNum,
-                                    @RequestParam("sortField") String sortField,
-                                    @RequestParam("sortDir") String sortDir) {
+    @RequestMapping("/displayMessages/page/{pageNum}")
+    public ModelAndView displayMessages(Model model,
+                                        @PathVariable(name = "pageNum") int pageNum,
+                                        @RequestParam("sortField") String sortField,
+                                        @RequestParam("sortDir") String sortDir) {
         Page<Contact> msgPage = contactService.findMsgsWithOpenStatus(pageNum, sortField, sortDir);
         List<Contact> contactMsgs = msgPage.getContent();
         ModelAndView modelAndView = new ModelAndView("messages.html");
@@ -67,10 +67,10 @@ public class ContactController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/closeMsg", method = GET)
+    @RequestMapping(value = "/closeMsg",method = GET)
     public String closeMsg(@RequestParam int id) {
         contactService.updateMsgStatus(id);
-        return "redirect:/displayMsgs/page/1?sortField=name&sortDir=desc";
+        return "redirect:/displayMessages/page/1?sortField=name&sortDir=desc";
     }
 
 }
