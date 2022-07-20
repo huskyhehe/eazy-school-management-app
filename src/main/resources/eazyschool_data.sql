@@ -86,3 +86,4 @@ INSERT INTO `contact_msg` (`name`,`mobile_num`,`email`,`subject`,`message`,`stat
 
 INSERT INTO `contact_msg` (`name`,`mobile_num`,`email`,`subject`,`message`,`status`,`created_at`, `created_by`)
   VALUES ('Dominik Tanner','4556127834','tannerdominik@gmail.com','Games schedule','Provide Summer games schedule','Open',CURDATE(),'DBA');
+
