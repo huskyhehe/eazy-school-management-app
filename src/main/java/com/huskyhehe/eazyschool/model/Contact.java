@@ -1,7 +1,7 @@
 package com.huskyhehe.eazyschool.model;
 
-
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -10,12 +10,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-/*
-@Data annotation is provided by Lombok library which generates getter, setter,
-equals(), hashCode(), toString() methods & Constructor at compile time.
-This makes our code short and clean.
-* */
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name="contact_msg")
 @SqlResultSetMappings({
@@ -52,7 +48,7 @@ public class Contact extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
-    @GenericGenerator(name = "native",strategy = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     @Column(name = "contact_id")
     private int contactId;
 
@@ -60,7 +56,7 @@ public class Contact extends BaseEntity {
     @Size(min = 3, message = "Name must be at least 3 characters long")
     private String name;
 
-    @NotBlank(message="Mobile number must not be blank")
+    @NotBlank(message = "Mobile number must not be blank")
     @Pattern(regexp="(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
     private String mobileNum;
 
