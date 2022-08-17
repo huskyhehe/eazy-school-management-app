@@ -1,5 +1,5 @@
-# Eazy School - student management system
-> student management system created with Spring Boot and MySQL.
+# Eazy School - school management web app
+> A school management web app with student & admin portal web app created with Spring Boot and MySQL.
 > <br/>**Admin Repo** here: https://github.com/huskyhehe/eazy-school-management-app-admin
 
 ## Table of Contents
@@ -19,7 +19,7 @@ A school management web app with student & admin portal web app.
 
 ## 2 Technologies Used
 Project is created with:
-Server:
+- Server:
     - Spring MVC
     - Spring Boot
     - Sprint Security
