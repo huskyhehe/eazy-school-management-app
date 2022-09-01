@@ -1,6 +1,6 @@
 # Eazy School - school management web app
 
-[![Build Status](https://app.travis-ci.com/huskyhehe/accenture-company-ecommerce-app.svg?branch=main)](https://app.travis-ci.com/huskyhehe/accenture-company-ecommerce-app)
+[![Build Status](https://app.travis-ci.com/huskyhehe/eazy-school-management-app.svg?branch=main)](https://app.travis-ci.com/huskyhehe/eazy-school-management-app)
 
 > A school management web app with student & admin portal web app created with Spring Boot and MySQL.
 > <br/>**Admin Repo** here: https://github.com/huskyhehe/eazy-school-management-app-admin
